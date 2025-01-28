@@ -2,8 +2,8 @@ local M = {}
 
 -- internal state management for providers
 local E = {
-    cache = {},
-    REQUEST_LOGIN_PATTERN = "NemuRequestLogin"
+	cache = {},
+	REQUEST_LOGIN_PATTERN = "NemuRequestLogin",
 }
 
 -- base provider interface
@@ -29,22 +29,5 @@ M.gemini = require("nemu.providers.gemini")
 -- 3. curl args construction
 -- 4. api key management
 -- 5. error handling
-
--- helper utils for providers:
----@param provider NemuBaseProvider
-function M.get_api_key(provider)
-    -- handle api key fetching, caching, env vars
-end
-
----@param provider NemuBaseProvider
----@param messages table
-function M.stream_response(provider, messages)
-    -- handle response streaming
-end
-
----@param provider NemuBaseProvider
-function M.validate_config(provider)
-    -- validate provider config
-end
 
 return M
